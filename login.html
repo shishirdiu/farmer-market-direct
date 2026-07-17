@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="browse-products.html">Browse Crops</a>
+        <a href="demand-board.html">Demand Board</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Sign up</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="auth-wrap">
+    <div class="auth-side">
+      <div class="eyebrow">Welcome back</div>
+      <h2>Every crop has a farmer's name on it here.</h2>
+      <p>Log in to manage your listings, track orders, or check on a group buy you joined.</p>
+    </div>
+
+    <div class="auth-form">
+      <div class="form-card">
+        <h2>Log in</h2>
+        <p class="sub">Enter your details to continue.</p>
+        <form action="login.php" method="POST">
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Your password" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </form>
+
+        <p class="form-foot">New to KrishiBazar? <a href="register.html">Create an account</a></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
