@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer Dashboard — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="browse-products.html">Browse Crops</a>
+        <a href="demand-board.html">Demand Board</a>
+        <a href="group-buy.html">Group Buy</a>
+        <a href="index.html" class="badge-role">Buyer</a>
+        <a href="login.html" class="btn btn-ghost btn-sm">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="dash-wrap">
+    <aside class="dash-side">
+      <div class="who">
+        <strong>Karim Store</strong>
+        Dhaka &middot; Buyer
+      </div>
+      <nav class="dash-nav">
+        <a href="buyer-dashboard.html" class="active">My Orders</a>
+        <a href="browse-products.html">Browse Crops</a>
+        <a href="demand-board.html">Post a Demand</a>
+        <a href="group-buy.html">Group Buys Joined</a>
+        <a href="#">Profile Settings</a>
+      </nav>
+    </aside>
+
+    <main class="dash-main">
+      <div class="dash-head">
+        <div>
+          <h2>My Orders</h2>
+          <p>Track your orders from payment submission to delivery.</p>
+        </div>
+        <a href="browse-products.html" class="btn btn-primary">Browse More Crops</a>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="num">9</div>
+          <div class="label">Total Orders</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">1</div>
+          <div class="label">Awaiting Confirmation</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">2</div>
+          <div class="label">Group Buys Joined</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">৳ 4,260</div>
+          <div class="label">Total Spent</div>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Farmer</th>
+              <th>Qty</th>
+              <th>Amount</th>
+              <th>Transaction ID</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Potato</td>
+              <td>Abdur Rahim</td>
+              <td>25 kg</td>
+              <td>৳ 700</td>
+              <td>8N7A6PZC1X</td>
+              <td><span class="status-pill status-submitted">Submitted</span></td>
+            </tr>
+            <tr>
+              <td>Onion</td>
+              <td>Karim Sheikh</td>
+              <td>40 kg (group)</td>
+              <td>৳ 1,760</td>
+              <td>7Q2M9XLD4B</td>
+              <td><span class="status-pill status-confirmed">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td>Mango</td>
+              <td>Fazlul Haque</td>
+              <td>10 kg</td>
+              <td>৳ 900</td>
+              <td>3P6R1TZY8K</td>
+              <td><span class="status-pill status-completed">Completed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
