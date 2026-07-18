@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Product — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="demand-board.html">Demand Board</a>
+        <a href="index.html" class="badge-role">Farmer</a>
+        <a href="login.html" class="btn btn-ghost btn-sm">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="dash-wrap">
+    <aside class="dash-side">
+      <div class="who">
+        <strong>Abdur Rahim</strong>
+        Bogura &middot; Farmer
+      </div>
+      <nav class="dash-nav">
+        <a href="farmer-dashboard.html">Dashboard</a>
+        <a href="add-product.html" class="active">Add Product</a>
+        <a href="farmer-orders.html">Orders &amp; Payments</a>
+        <a href="demand-board.html">Demand Board</a>
+        <a href="group-buy.html">Group Buy Requests</a>
+        <a href="#">Profile Settings</a>
+      </nav>
+    </aside>
+
+    <main class="dash-main">
+      <div class="dash-head">
+        <div>
+          <h2>Add a new crop listing</h2>
+          <p>Fill in the details buyers need to trust your listing.</p>
+        </div>
+      </div>
+      <form class="table-card" action="add_product.php" method="POST" enctype="multipart/form-data">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="crop_name">Crop name</label>
+            <input type="text" id="crop_name" name="crop_name" placeholder="e.g. Potato" required>
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="">Select category</option>
+              <option value="vegetable">Vegetable</option>
+              <option value="fruit">Fruit</option>
+              <option value="grain">Grain / Rice</option>
+              <option value="spice">Spice</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quantity">Quantity available (kg)</label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g. 200" required>
+          </div>
+          <div class="form-group">
+            <label for="price">Price per kg (৳)</label>
+            <input type="number" id="price" name="price_per_unit" min="1" step="0.5" placeholder="e.g. 28" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="harvest_date">Harvest date</label>
+            <input type="date" id="harvest_date" name="harvest_date" required>
+          </div>
+          <div class="form-group">
+            <label for="location">Location / District</label>
+            <input type="text" id="location" name="location" value="Bogura" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Photo (optional)</label>
+          <input type="file" id="image" name="image" accept="image/*">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description (optional)</label>
+          <textarea id="description" name="description" rows="3" placeholder="Any detail buyers should know — variety, freshness, storage, etc."></textarea>
+        </div>
+
+        <div class="alert alert-info">
+          <label>
+            <input type="checkbox" name="group_buy_enabled" value="1">
+            Enable Group Buying for this crop
+          </label>
+          <p class="hint">Buyers can team up to reach a bulk quantity together instead of ordering alone.</p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="group_target">Group target quantity (kg)</label>
+            <input type="number" id="group_target" name="group_target_quantity" min="1" placeholder="e.g. 100">
+          </div>
+          <div class="form-group">
+            <label for="group_price">Group price per kg (৳)</label>
+            <input type="number" id="group_price" name="group_price_per_unit" min="1" step="0.5" placeholder="Optional discount price">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Publish Listing</button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
