@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Buy — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="browse-products.html">Browse Crops</a>
+        <a href="demand-board.html">Demand Board</a>
+        <a href="group-buy.html">Group Buy</a>
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Buy together, pay less</div>
+        <h2>Group Buying</h2>
+        <p>Can't buy a full sack alone? Join buyers near you to reach the farmer's bulk quantity together.</p>
+      </div>
+
+      <div class="group-card">
+        <div class="group-card-head">
+          <div>
+            <h3>Onion — Faridpur (Karim Sheikh)</h3>
+            <span class="tag tag-marigold">Bulk price ৳44/kg (regular ৳48/kg)</span>
+          </div>
+          <span class="status-pill status-submitted">Open</span>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+        <div class="group-meta">
+          <span>Collected: 28 / 40 kg</span>
+          <span>70% complete</span>
+          <span>Deadline: 22 Jul 2026</span>
+        </div>
+
+        <div>
+          <div class="member-row"><span>Karim Store</span><span>10 kg</span></div>
+          <div class="member-row"><span>Nasrin Akter</span><span>8 kg</span></div>
+          <div class="member-row"><span>Green Grocers</span><span>10 kg</span></div>
+        </div>
+
+        <form action="join_group_order.php" method="POST">
+          <input type="hidden" name="group_order_id" value="1">
+          <div class="form-group">
+            <label for="join_qty">Your quantity (kg)</label>
+            <input type="number" id="join_qty" name="quantity" min="1" max="12" value="5">
+          </div>
+          <button type="submit" class="btn btn-accent">Join This Group</button>
+        </form>
+      </div>
+
+      <div class="group-card">
+        <div class="group-card-head">
+          <div>
+            <h3>Potato — Bogura (Abdur Rahim)</h3>
+            <span class="tag tag-marigold">Bulk price ৳25/kg (regular ৳28/kg)</span>
+          </div>
+          <span class="status-pill status-submitted">Open</span>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+        <div class="group-meta">
+          <span>Collected: 35 / 100 kg</span>
+          <span>35% complete</span>
+          <span>Deadline: 24 Jul 2026</span>
+        </div>
+
+        <div>
+          <div class="member-row"><span>Rasheed Traders</span><span>25 kg</span></div>
+          <div class="member-row"><span>Nasrin Akter</span><span>10 kg</span></div>
+        </div>
+
+        <form action="join_group_order.php" method="POST">
+          <input type="hidden" name="group_order_id" value="2">
+          <div class="form-group">
+            <label for="join_qty2">Your quantity (kg)</label>
+            <input type="number" id="join_qty2" name="quantity" min="1" max="65" value="10">
+          </div>
+          <button type="submit" class="btn btn-accent">Join This Group</button>
+        </form>
+      </div>
+
+      <div class="group-card">
+        <p>Don't see a group for the crop you want?</p>
+        <a href="browse-products.html" class="btn btn-primary">Start a New Group Order</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>KrishiBazar &mdash; Farmer to Market Direct Selling System</span>
+      <span class="footer-note">Progress bar powered by a GroupOrder class (JS OOP)</span>
+    </div>
+  </footer>
+</body>
+</html>
