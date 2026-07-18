@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demand Board — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="browse-products.html">Browse Crops</a>
+        <a href="demand-board.html">Demand Board</a>
+        <a href="group-buy.html">Group Buy</a>
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Demand forecasting</div>
+        <h2>Demand Board</h2>
+        <p>Buyers post what they'll need ahead of time. Farmers plan their harvest around real demand instead of guessing.</p>
+      </div>
+
+      <div class="trending-box">
+        <h3>Most demanded crops this week</h3>
+        <div class="trend-row"><span><span class="trend-rank">01</span>Potato</span><span>500 kg needed</span></div>
+        <div class="trend-row"><span><span class="trend-rank">02</span>Tomato</span><span>350 kg needed</span></div>
+        <div class="trend-row"><span><span class="trend-rank">03</span>Onion</span><span>200 kg needed</span></div>
+        <div class="trend-row"><span><span class="trend-rank">04</span>Green Chili</span><span>90 kg needed</span></div>
+      </div>
+
+      <div>
+
+        <div>
+          <h3>Open demand posts</h3>
+
+          <div class="demand-card">
+            <div class="info">
+              <h4>Tomato — 100 kg needed</h4>
+              <div class="meta">By Karim Store, Dhaka &middot; Needed by 20 Jul 2026</div>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">I Can Supply</a>
+          </div>
+
+          <div class="demand-card">
+            <div class="info">
+              <h4>Potato — 300 kg needed</h4>
+              <div class="meta">By Green Grocers, Dhaka &middot; Needed by 25 Jul 2026</div>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">I Can Supply</a>
+          </div>
+
+          <div class="demand-card">
+            <div class="info">
+              <h4>Onion — 150 kg needed</h4>
+              <div class="meta">By Rasheed Traders, Chattogram &middot; Needed by 28 Jul 2026</div>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">I Can Supply</a>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <h3>Post a demand</h3>
+          <form action="post_demand.php" method="POST">
+            <div class="form-group">
+              <label for="crop_name">Crop name</label>
+              <input type="text" id="crop_name" name="crop_name" placeholder="e.g. Tomato" required>
+            </div>
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" name="category" required>
+                <option value="">Select category</option>
+                <option value="vegetable">Vegetable</option>
+                <option value="fruit">Fruit</option>
+                <option value="grain">Grain / Rice</option>
+                <option value="spice">Spice</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity needed (kg)</label>
+              <input type="number" id="quantity" name="quantity_needed" min="1" required>
+            </div>
+            <div class="form-group">
+              <label for="needed_by">Needed by</label>
+              <input type="date" id="needed_by" name="needed_by_date" required>
+            </div>
+            <div class="form-group">
+              <label for="location">Delivery location</label>
+              <input type="text" id="location" name="location" placeholder="e.g. Dhaka" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Post Demand</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>KrishiBazar &mdash; Farmer to Market Direct Selling System</span>
+      <span class="footer-note">Trending list is calculated with SQL GROUP BY + SUM</span>
+    </div>
+  </footer>
+
+</body>
+</html>
