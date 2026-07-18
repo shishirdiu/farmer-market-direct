@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orders &amp; Payments — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="demand-board.html">Demand Board</a>
+        <a href="index.html" class="badge-role">Farmer</a>
+        <a href="login.html" class="btn btn-ghost btn-sm">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="dash-wrap">
+    <aside class="dash-side">
+      <div class="who">
+        <strong>Abdur Rahim</strong>
+        Bogura &middot; Farmer
+      </div>
+      <nav class="dash-nav">
+        <a href="farmer-dashboard.html">Dashboard</a>
+        <a href="add-product.html">Add Product</a>
+        <a href="farmer-orders.html" class="active">Orders &amp; Payments</a>
+        <a href="demand-board.html">Demand Board</a>
+        <a href="group-buy.html">Group Buy Requests</a>
+        <a href="#">Profile Settings</a>
+      </nav>
+    </aside>
+
+    <main class="dash-main">
+      <div class="dash-head">
+        <div>
+          <h2>Orders &amp; Payment Verification</h2>
+          <p>Check the buyer's Transaction ID against your bKash statement before confirming.</p>
+        </div>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Buyer</th>
+              <th>Product</th>
+              <th>Qty</th>
+              <th>Amount</th>
+              <th>Transaction ID</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Karim Store</td>
+              <td>Potato</td>
+              <td>25 kg</td>
+              <td>৳ 700</td>
+              <td><code>8N7A6PZC1X</code></td>
+              <td><span class="status-pill status-submitted">Submitted</span></td>
+              <td>
+                <a href="#" class="btn btn-primary btn-sm">Confirm</a>
+                <a href="#" class="btn btn-ghost btn-sm">Reject</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Rasheed Traders</td>
+              <td>Potato</td>
+              <td>60 kg</td>
+              <td>৳ 1,680</td>
+              <td>&mdash;</td>
+              <td><span class="status-pill status-pending">Awaiting Payment</span></td>
+              <td><a href="#" class="btn btn-ghost btn-sm">Remind Buyer</a></td>
+            </tr>
+            <tr>
+              <td>Nasrin Akter</td>
+              <td>Green Chili</td>
+              <td>5 kg</td>
+              <td>৳ 300</td>
+              <td><code>4X9K2LMP7Q</code></td>
+              <td><span class="status-pill status-confirmed">Confirmed</span></td>
+              <td><a href="#" class="btn btn-ghost btn-sm">Mark Delivered</a></td>
+            </tr>
+            <tr>
+              <td>Green Grocers</td>
+              <td>Green Chili</td>
+              <td>10 kg</td>
+              <td>৳ 600</td>
+              <td><code>1Z8Y3WQF5T</code></td>
+              <td><span class="status-pill status-completed">Completed</span></td>
+              <td><a href="#" class="btn btn-ghost btn-sm">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="hint">Duplicate Transaction IDs are automatically blocked by the system when a buyer submits an order.</p>
+    </main>
+  </div>
+</body>
+</html>
