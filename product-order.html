@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Place Order — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="browse-products.html">Browse Crops</a>
+        <a href="demand-board.html">Demand Board</a>
+        <a href="group-buy.html">Group Buy</a>
+        <a href="buyer-dashboard.html" class="badge-role">Buyer</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Order</div>
+        <h2>Bogura Potato</h2>
+        <p>by Abdur Rahim &middot; Bogura &middot; 220 kg available</p>
+      </div>
+      <form class="form-card" action="place_order.php" method="POST" id="orderForm">
+        <input type="hidden" name="product_id" value="1">
+
+        <div class="table-card">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quantity">Quantity (kg)</label>
+              <input type="number" id="quantity" name="quantity" min="1" max="220" value="5" required>
+              <span class="hint">Available: 220 kg</span>
+            </div>
+            <div class="form-group">
+              <label>Price per kg</label>
+              <input type="text" value="৳ 28" disabled>
+            </div>
+          </div>
+
+          <div class="ledger-row">
+            <span>Total amount</span>
+            <span class="up" id="totalAmount">৳ 140</span>
+          </div>
+        </div>
+
+        <div class="alert alert-info">
+          <strong>Pay with bKash:</strong> Send the total amount to <strong>017XX-XXXXXX</strong> (Abdur Rahim) using "Send Money" on your bKash app, then enter the Transaction ID below.
+        </div>
+
+        <div class="form-group">
+          <label for="transaction_id">bKash Transaction ID</label>
+          <input type="text" id="transaction_id" name="transaction_id" placeholder="e.g. 8N7A6PZC1X" required minlength="8">
+          <span class="hint">You'll find this in the payment confirmation SMS from bKash.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="delivery_note">Delivery note (optional)</label>
+          <textarea id="delivery_note" name="delivery_note" rows="3" placeholder="Preferred delivery day, address details, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit Order</button>
+        <p class="form-foot">Order status will show as <strong>Pending Payment</strong> until the farmer verifies your Transaction ID.</p>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>KrishiBazar &mdash; Farmer to Market Direct Selling System</span>
+      <span class="footer-note">Total amount auto-calculates with JS OOP (Order class)</span>
+    </div>
+  </footer>
+</body>
+</html>
