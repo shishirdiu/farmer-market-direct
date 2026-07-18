@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="index.html" class="badge-role">Admin</a>
+        <a href="login.html" class="btn btn-ghost btn-sm">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="dash-wrap">
+    <aside class="dash-side">
+      <div class="who">
+        <strong>System Admin</strong>
+        KrishiBazar HQ
+      </div>
+      <nav class="dash-nav">
+        <a href="admin-dashboard.html" class="active">Overview</a>
+        <a href="#">Manage Farmers</a>
+        <a href="#">Manage Buyers</a>
+        <a href="#">Manage Products</a>
+        <a href="#">All Orders</a>
+      </nav>
+    </aside>
+
+    <main class="dash-main">
+      <div class="dash-head">
+        <div>
+          <h2>Platform Overview</h2>
+          <p>System-wide statistics across all farmers and buyers.</p>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="num">240</div>
+          <div class="label">Total Farmers</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">610</div>
+          <div class="label">Total Buyers</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">1,120</div>
+          <div class="label">Products Listed</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">৳ 6,40,000</div>
+          <div class="label">Total Completed Sales</div>
+        </div>
+      </div>
+
+      <h3>Pending account approvals</h3>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Location</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mizanur Rahman</td>
+              <td>Farmer</td>
+              <td>Rangpur</td>
+              <td>017XXXXXXXX</td>
+              <td>
+                <a href="#" class="btn btn-primary btn-sm">Approve</a>
+                <a href="#" class="btn btn-ghost btn-sm">Reject</a>
+              </td>
+            </tr>
+            <tr>
+              <td>City Fresh Mart</td>
+              <td>Buyer</td>
+              <td>Dhaka</td>
+              <td>019XXXXXXXX</td>
+              <td>
+                <a href="#" class="btn btn-primary btn-sm">Approve</a>
+                <a href="#" class="btn btn-ghost btn-sm">Reject</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Recent orders (all users)</h3>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Buyer</th>
+              <th>Farmer</th>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Karim Store</td>
+              <td>Abdur Rahim</td>
+              <td>Potato</td>
+              <td>৳ 700</td>
+              <td><span class="status-pill status-submitted">Submitted</span></td>
+            </tr>
+            <tr>
+              <td>Green Grocers</td>
+              <td>Fazlul Haque</td>
+              <td>Mango</td>
+              <td>৳ 900</td>
+              <td><span class="status-pill status-completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td>Rasheed Traders</td>
+              <td>Karim Sheikh</td>
+              <td>Onion</td>
+              <td>৳ 1,760</td>
+              <td><span class="status-pill status-confirmed">Confirmed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
