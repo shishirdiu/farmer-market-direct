@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse Crops — KrishiBazar</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Krishi<span>Bazar</span></a>
+      <nav class="nav">
+        <a href="browse-products.html">Browse Crops</a>
+        <a href="demand-board.html">Demand Board</a>
+        <a href="group-buy.html">Group Buy</a>
+        <a href="buyer-dashboard.html" class="badge-role">Buyer</a>
+        <a href="buyer-dashboard.html" class="btn btn-ghost btn-sm">My Orders</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">All listings</div>
+        <h2>Browse fresh crops</h2>
+      </div>
+      <form class="filter-bar" id="filterForm">
+        <div class="field field-search">
+          <label for="search">Search</label>
+          <input type="text" id="search" name="search" placeholder="Search crop name, e.g. Tomato">
+        </div>
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="">All categories</option>
+            <option value="vegetable">Vegetable</option>
+            <option value="fruit">Fruit</option>
+            <option value="grain">Grain / Rice</option>
+            <option value="spice">Spice</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="location">Location</label>
+          <select id="location" name="location">
+            <option value="">All districts</option>
+            <option value="bogura">Bogura</option>
+            <option value="jashore">Jashore</option>
+            <option value="faridpur">Faridpur</option>
+            <option value="rangpur">Rangpur</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sort">Sort by price</label>
+          <select id="sort" name="sort">
+            <option value="">Default</option>
+            <option value="low-high">Low to High</option>
+            <option value="high-low">High to Low</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" id="applyFilterBtn">Apply</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="product-grid" id="productGrid">
+
+        <div class="ticket" data-category="vegetable" data-location="bogura" data-price="28">
+          <div class="ticket-media">Potato · 220kg available</div>
+          <div class="ticket-body">
+            <div class="ticket-category">Vegetable</div>
+            <h3>Bogura Potato</h3>
+            <div class="ticket-farmer">by Abdur Rahim · Bogura</div>
+            <div class="ticket-price-row">
+              <div class="ticket-price">৳28<small>/kg</small></div>
+              <span class="ticket-stock">220 kg left</span>
+            </div>
+            <div class="ticket-actions">
+              <a href="product-order.html" class="btn btn-primary btn-sm btn-block">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket" data-category="vegetable" data-location="jashore" data-price="35">
+          <div class="ticket-media">Tomato · 90kg available</div>
+          <div class="ticket-body">
+            <div class="ticket-category">Vegetable</div>
+            <h3>Jashore Tomato</h3>
+            <div class="ticket-farmer">by Salma Khatun · Jashore</div>
+            <div class="ticket-price-row">
+              <div class="ticket-price">৳35<small>/kg</small></div>
+              <span class="ticket-stock">90 kg left</span>
+            </div>
+            <div class="ticket-actions">
+              <a href="product-order.html" class="btn btn-primary btn-sm btn-block">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket" data-category="vegetable" data-location="faridpur" data-price="48">
+          <div class="ticket-media">Onion · 500kg available</div>
+          <div class="ticket-body">
+            <div class="ticket-category">Vegetable</div>
+            <h3>Faridpur Onion</h3>
+            <div class="ticket-farmer">by Karim Sheikh · Faridpur</div>
+            <div class="ticket-price-row">
+              <div class="ticket-price">৳48<small>/kg</small></div>
+              <span class="ticket-stock">500 kg left</span>
+            </div>
+            <div class="ticket-actions">
+              <a href="product-order.html" class="btn btn-primary btn-sm btn-block">Order Now</a>
+              <a href="group-buy.html" class="btn btn-accent btn-sm btn-block">Group Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket" data-category="grain" data-location="bogura" data-price="32">
+          <div class="ticket-media">Paddy Rice · 800kg available</div>
+          <div class="ticket-body">
+            <div class="ticket-category">Grain</div>
+            <h3>Bogura Paddy</h3>
+            <div class="ticket-farmer">by Jasim Uddin · Bogura</div>
+            <div class="ticket-price-row">
+              <div class="ticket-price">৳32<small>/kg</small></div>
+              <span class="ticket-stock">800 kg left</span>
+            </div>
+            <div class="ticket-actions">
+              <a href="product-order.html" class="btn btn-primary btn-sm btn-block">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket" data-category="spice" data-location="bogura" data-price="60">
+          <div class="ticket-media">Green Chili · 40kg available</div>
+          <div class="ticket-body">
+            <div class="ticket-category">Spice</div>
+            <h3>Bogura Green Chili</h3>
+            <div class="ticket-farmer">by Abdur Rahim · Bogura</div>
+            <div class="ticket-price-row">
+              <div class="ticket-price">৳60<small>/kg</small></div>
+              <span class="ticket-stock">40 kg left</span>
+            </div>
+            <div class="ticket-actions">
+              <a href="product-order.html" class="btn btn-primary btn-sm btn-block">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket" data-category="fruit" data-location="rangpur" data-price="90">
+          <div class="ticket-media">Mango · 150kg available</div>
+          <div class="ticket-body">
+            <div class="ticket-category">Fruit</div>
+            <h3>Rangpur Mango</h3>
+            <div class="ticket-farmer">by Fazlul Haque · Rangpur</div>
+            <div class="ticket-price-row">
+              <div class="ticket-price">৳90<small>/kg</small></div>
+              <span class="ticket-stock">150 kg left</span>
+            </div>
+            <div class="ticket-actions">
+              <a href="product-order.html" class="btn btn-primary btn-sm btn-block">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>KrishiBazar &mdash; Farmer to Market Direct Selling System</span>
+      <span class="footer-note">Search/filter logic will be added with JavaScript DOM</span>
+    </div>
+  </footer>
+
+  <!-- script.js will contain the JS DOM filter/search/sort logic -->
+</body>
+</html>
